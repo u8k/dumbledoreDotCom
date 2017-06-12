@@ -1,0 +1,86 @@
+body {
+  text-align: center;
+  background-color: #B0C4DE;
+}
+img {
+  width: 40vmin;
+  max-width: 280px;
+  margin-top: 5vh;
+  border-radius: 50%;
+}
+#name {
+  font-size: 7vmin;
+}
+#says {
+  font-size: 6.2vmin;
+}
+#quote {
+  margin: 3vh;
+  font-size: 8.2vmin;
+}
+
+.button {
+  text-align: center;
+  font-size: 6vmin;
+  background-color: LightGrey;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1vmin;
+}
+
+@media only screen and (min-width: 700px) {
+  #name {
+    font-size: 5vmin;
+  }
+  #says {
+    font-size: 4vmin;
+  }
+  #quote {
+    margin: 3vh;
+    font-size: 6vmin;
+  }
+  .button {
+    font-size: 4.5vmin
+  }
+}
+
+.headContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 3vmin;
+}
+
+@media only screen and (max-height: 500px) {
+  .headContainer {
+    flex-direction: row;
+  }
+}
+
+.buttonContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button:active {
+  box-shadow: 0px 0px 2vmin 2px black;
+}
+
+@media only screen and (any-hover: hover), (-moz-touch-enabled: 0) {
+  .button:hover {
+    box-shadow: 0px 0px 1vmin 1px black;
+  }
+  .button:active {
+    box-shadow: 0px 0px 0px 0px black;
+  }
+}

@@ -1,98 +1,12 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-	<title>dumbledore.com</title>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		body {
-			text-align: center;
-			background-color: #B0C4DE;
-		}
-		img {
-			width: 40vmin;
-			max-width: 280px;
-			margin-top: 5vh;
-			border-radius: 50%;
-		}
-		#name {
-			font-size: 7vmin;
-		}
-		#says {
-			font-size: 6.2vmin;
-		}
-		#quote {
-			margin: 3vh;
-			font-size: 8.2vmin;
-		}
-
-		.button {
-			text-align: center;
-			font-size: 6vmin;
-			background-color: LightGrey;
-			border-radius: 5px;
-			cursor: pointer;
-			padding: 1vmin;
-		}
-
-		@media only screen and (min-width: 700px) {
-			#name {
-				font-size: 5vmin;
-			}
-			#says {
-				font-size: 4vmin;
-			}
-			#quote {
-				margin: 3vh;
-				font-size: 6vmin;
-			}
-			.button {
-				font-size: 4.5vmin
-			}
-		}
-
-		.headContainer {
-			display: flex;
-			flex-direction: column;
-			align-content: space-around;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.innerContainer{
-			display: flex;
-			flex-direction: column;
-			margin: 3vmin;
-		}
-
-		@media only screen and (max-height: 500px) {
-			.headContainer {
-				flex-direction: row;
-			}
-		}
-
-		.buttonContainer {
-			width: 100%;
-			max-width: 800px;
-			margin: auto;
-			display: flex;
-			justify-content: space-around;
-		}
-
-		.button:active {
-			box-shadow: 0px 0px 2vmin 2px black;
-		}
-
-		@media only screen and (any-hover: hover), (-moz-touch-enabled: 0) {
-			.button:hover {
-				box-shadow: 0px 0px 1vmin 1px black;
-			}
-			.button:active {
-				box-shadow: 0px 0px 0px 0px black;
-			}
-		}
-
-	</style>
+	<title>dumbledore.com</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -109,47 +23,7 @@
 		<div id= "tweet" class="button">tweet it</div>
 	</div>
 
+	<script src="script.js"></script>
 </body>
-
-<footer>
-	<script>
-		var library = [
-			"Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real?",
-			"Nitwit! Blubber! Oddment! Tweak!",
-			"Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.",
-			"Killing is not so easy as the innocent believe.",
-			"Alas! Earwax!",
-			"Age is foolish and forgetful when it underestimates youth.",
-			"After all, to the well-organized mind, death is but the next great adventure.",
-			"Do not pity the dead, Harry. Pity the living, and, above all, those who live without love.",
-			"Differences of habit and language are nothing at all if our aims are identical and our hearts are open.",
-			"It does not do to dwell on dreams and forget to live.",
-			"It is important to fight and fight again, and keep fighting, for only then can evil be kept at bay though never quite eradicated.",
-			"It is our choices that show what we truly are, far more than our abilities.",
-			"It’s the unknown we fear when we look upon death and darkness, nothing more."
-			]
-
-		var x = -1;
-		function getQuote() {
-			var y = x;
-			x = Math.floor(Math.random()*library.length);
-			if (x === y) {
-					getQuote();
-				}
-			document.getElementById("quote").innerHTML = '"'+library[x]+'"';
-		}
-
-		function tweet(){
-			var url = ("https://twitter.com/intent/tweet?text="+'"'+library[x]+'" -Dumbledore');
-			window.open(url);
-		}
-
-		getQuote();
-
-		document.getElementById("another").addEventListener("click", getQuote);
-		document.getElementById("tweet").addEventListener("click", tweet);
-
-	</script>
-</footer>
 
 </html>
